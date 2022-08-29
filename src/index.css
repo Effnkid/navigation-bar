@@ -1,13 +1,150 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.flexInit {
+  display: flex;
+  flex-wrap: wrap;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.flexCenterRow {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.flexAroundRow {
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.flexBetweenRow {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.flexEvenRow {
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.flexStartRow {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.flexEndRow {
+  flex-direction: row;
+  justify-content: end;
+  align-items: flex-start;
+}
+.flexCenterColumn {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flexStartColumn {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.flexEndColumn {
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.flexAroundColumn {
+  flex-direction: column;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  box-shadow: rgba(21, 21, 21, 0.05) 6px 6px 6px;
+  z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .link-wrapper {
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 150px;
+  box-sizing: border-box;
+  padding: 8px;
+}
+nav .drop-down {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 100%;
+  cursor: pointer;
+}
+@media screen and (min-width: 900px) {
+  nav .drop-down {
+    display: none;
+  }
+}
+nav .active {
+  text-decoration: underline;
+}
+nav.light {
+  background-color: #efefef;
+  color: #000000;
+}
+nav.light a {
+  color: #151515;
+}
+nav.light .side-bar {
+  background-color: #9b9b9b;
+}
+nav.light .side-bar a {
+  color: white;
+}
+nav.dark {
+  background-color: #151515;
+  color: white;
+}
+nav.dark a {
+  color: #d5d5d5;
+}
+nav.dark .side-bar {
+  background-color: #444444;
+}
+nav.dark .side-bar a {
+  color: #000000;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  background-color: #1c1c1c;
+  color: white;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+  margin-bottom: 16px;
+}
+#root {
+  box-sizing: border-box;
+  padding-top: 80px;
+  min-height: 100vh;
+  position: relative;
+}
+@media screen and (min-width: 900px) {
+  #root {
+    padding-top: 60px;
+  }
+}
+a {
+  text-decoration: none;
 }

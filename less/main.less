@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+}
+
+html,body{
+  background-color: @backgroundDark;
+  color: @fd1;
+}
+
+p, h1, h2, h3, h4, h5, h6, label {
+  margin-bottom: 16px;
+}
+
+#root {
+  box-sizing: border-box;
+  padding-top: @navHeightMobile;
+  min-height: 100vh;
+  position: relative;
+
+  @media screen and (min-width: @mb2) {
+    padding-top: @navHeight;
+  }
+
+}
+
+a {
+  text-decoration: none;
+}
