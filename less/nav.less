@@ -10,15 +10,30 @@ nav{
   .flexInit();
   .flexBetweenRow();
 
+  @media screen and (min-width: @mb2){
+    height: @navHeight;
+  }
+
 
   //nav logo
+
+  .logo{
+    .flexInit();
+    .flexCenterRow();
+    height: 100%;
+    width: @navHeightMobile;
+  }
 
   //non-mobile navigation
 
   .link-wrapper{
+    display: none;
     .flexEvenRow();
     min-width: 150px;
     .pad(8px);
+    @media screen and (min-width: @mb2){
+      .flexInit();
+    }
   }
 
   //drop down button
@@ -35,6 +50,32 @@ nav{
   }
 
   //mobile navigation menu
+
+  .side-bar{
+    .flexInit();
+    .flexCenterColumn();
+    position: fixed;
+    top: @navHeightMobile;
+    height: 100%;
+    transition: 0.425s;
+    background-color: @minord;
+    width: 100%;
+    a{
+      color: @fl3;
+      .flexInit();
+      .flexCenterRow();
+      height: 60px;
+    }
+
+    @media screen and (min-width: @mb1){
+      width: 300px;
+    }
+
+    @media screen and (min-width: @mb2){
+      display: none;
+    }
+
+  }
 
 
   .active{
