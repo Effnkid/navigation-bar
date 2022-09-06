@@ -64,13 +64,34 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (min-width: 900px) {
+  nav {
+    height: 60px;
+  }
+}
+nav .logo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 80px;
+}
 nav .link-wrapper {
+  display: none;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   min-width: 150px;
   box-sizing: border-box;
   padding: 8px;
+}
+@media screen and (min-width: 900px) {
+  nav .link-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 nav .drop-down {
   display: flex;
@@ -84,6 +105,38 @@ nav .drop-down {
 }
 @media screen and (min-width: 900px) {
   nav .drop-down {
+    display: none;
+  }
+}
+nav .side-bar {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 80px;
+  height: 100%;
+  width: 100%;
+  transition: 0.425s;
+  background-color: #444444;
+}
+nav .side-bar a {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+@media screen and (min-width: 600px) {
+  nav .side-bar {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 900px) {
+  nav .side-bar {
     display: none;
   }
 }

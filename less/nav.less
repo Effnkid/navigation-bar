@@ -1,82 +1,110 @@
-nav{
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: @navHeightMobile;
-  width: 100%;
-  box-shadow: rgba(21,21,21,0.05) 6px 6px 6px;
-  z-index: 100;
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: @navHeightMobile;
+	width: 100%;
+	box-shadow: rgba(21, 21, 21, 0.05) 6px 6px 6px;
+	z-index: 100;
 
+	.flexInit();
+	.flexBetweenRow();
 
-  .flexInit();
-  .flexBetweenRow();
+	@media screen and (min-width: @mb2) {
+		height: @navHeight;
+	}
 
+	//nav logo
+	.logo {
+		.flexInit();
+		.flexCenterRow();
+		height: 100%;
+		width: @navHeightMobile;
+	}
+	//non-mobile navigation
 
+	.link-wrapper {
+		display: none;
+		.flexEvenRow();
+		min-width: 150px;
+		.pad(8px);
+		@media screen and(min-width:@mb2) {
+			.flexInit();
+		}
+	}
 
-  //nav logo
+	//drop down button
+	.drop-down {
+		.flexInit();
+		.flexCenterRow();
+		width: @navHeightMobile;
+		height: 100%;
+		cursor: pointer;
 
-  //non-mobile navigation
+		@media screen and (min-width: @mb2) {
+			display: none;
+		}
+	}
 
-  .link-wrapper{
-    .flexEvenRow();
-    min-width: 150px;
-    .pad(8px);
+	//mobile navigation menu
 
-  }
+	.side-bar {
+		.flexInit();
+		.flexCenterColumn();
+		position: fixed;
+		top: @navHeightMobile;
+		height: 100%;
+		width: 100%;
+		transition: 0.425s;
+		background-color: @minord;
+		a {
+			color: @fl3;
+			.flexInit();
+			.flexCenterRow();
+			height: 60px;
+		}
+		@media screen and(min-width: @mb1) {
+			width: 300px;
+		}
+		@media screen and(min-width: @mb2) {
+			display: none;
+		}
+	}
 
-  //drop down button
-  .drop-down{
-    .flexInit();
-    .flexCenterRow();
-    width: @navHeightMobile;
-    height: 100%;
-    cursor: pointer;
-
-    @media screen and (min-width: @mb2){
-      display: none;
-    }
-  }
-
-  //mobile navigation menu
-
-
-  .active{
-    text-decoration: underline;
-  }
-
-
-
+	.active {
+		text-decoration: underline;
+	}
 }
 
 //nav color themeings
-nav.light{
-  background-color: @mainl;
-  color: @fl1;
+nav.light {
+	background-color: @mainl;
+	color: @fl1;
 
-  a{
-    color: @fl2;
-  }
+	a {
+		color: @fl2;
+	}
 
-  .side-bar{
-    background-color: @minorl;
-    a{
-      color: @fl3;
-    }
-  }
+	.side-bar {
+		background-color: @minorl;
+		a {
+			color: @fl3;
+		}
+	}
 }
 
-nav.dark{
-  background-color: @maind;
-  color: @fd1;
+nav.dark {
+	background-color: @maind;
+	color: @fd1;
 
-  a{
-    color: @fd2;
-  }
+	a {
+		color: @fd2;
+	}
 
-  .side-bar{
-    background-color: @minord;
-    a{
-      color: @fd3;
-    }
-  }
+	.side-bar {
+		background-color: @minord;
+		a {
+			color: @fd3;
+		}
+	}
 }
